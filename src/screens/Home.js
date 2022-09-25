@@ -101,7 +101,7 @@ const styles = StyleSheet.create({
     awareCardView: {
         flexDirection: 'row',
         alignItems: 'center',
-        justifyContent: 'space-between',
+        justifyContent: 'center',
         width: 100,
         marginTop: spacing[8]
       //  flexWrap: 'wrap'

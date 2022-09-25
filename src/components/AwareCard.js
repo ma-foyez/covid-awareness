@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
 import Text from './master/Text';
-import { colors } from './../theme/colors';
+import { spacing } from './../theme/spacing';
 
 const AwareCard = ({ data }) => {
     return (
@@ -22,7 +22,8 @@ const styles = StyleSheet.create({
     awareCard: {
        flexDirection: 'column',
        justifyContent: 'center',
-       alignItems: 'center'
+       alignItems: 'center',
+       marginRight: spacing[1]
     },
 
 })
