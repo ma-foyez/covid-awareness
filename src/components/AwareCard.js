@@ -23,7 +23,7 @@ const styles = StyleSheet.create({
        flexDirection: 'column',
        justifyContent: 'center',
        alignItems: 'center',
-       marginRight: spacing[1]
+       marginRight: spacing[3]
     },
 
 })

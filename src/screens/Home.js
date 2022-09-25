@@ -1,12 +1,12 @@
 import React from 'react';
-import { Pressable, SafeAreaView, ScrollView, StyleSheet, View } from 'react-native';
+import { Image, Pressable, SafeAreaView, ScrollView, StyleSheet, View } from 'react-native';
 import Text from '../components/master/Text';
 import { colors } from '../theme/colors';
 import { spacing } from '../theme/spacing';
 import Ionicons from '@expo/vector-icons/Ionicons';
 import { AntDesign } from '@expo/vector-icons';
 import { Feather } from '@expo/vector-icons';
-import { Bangladesh } from '../../assets/svg';
+import { Bangladesh, Test } from '../../assets/svg';
 import { awarenessData } from './../../assets/data/awarenessData';
 import AwareCard from './../components/AwareCard';
 
@@ -54,6 +54,18 @@ const Home = () => {
                             ))
                         }
                     </View>
+
+                    <View style={styles.testArea}>
+                        {/* <Test /> */}
+                        <Image
+                            style={styles.testLogo}
+                            source={require('./../../assets/Group.png')}
+                        />
+                        <View>
+                            <Text preset='h4' style={{ color: colors.white, marginVertical: spacing[5] }}> Do your own test! </Text>
+                            <Text style={{ color: colors.white, marginVertical: 5, lineHeight: 20, opacity: 0.8 }}> Follow the instructions to do your own test. </Text>
+                        </View>
+                    </View>
                 </View>
             </ScrollView>
         </SafeAreaView>
@@ -100,11 +112,26 @@ const styles = StyleSheet.create({
     },
     awareCardView: {
         flexDirection: 'row',
-        alignItems: 'center',
-        justifyContent: 'center',
+        justifyContent: 'space-between',
         width: 100,
         marginTop: spacing[8]
-      //  flexWrap: 'wrap'
+        //  flexWrap: 'wrap'
+    },
+    testArea: {
+        marginTop: spacing[9],
+        backgroundColor: colors.indigo,
+        flexDirection: 'row',
+        borderRadius: spacing[5],
+        padding: spacing[2],
+        position: 'relative'
+    }, 
+    testLogo: {
+        position: 'absolute',
+        top: -15,
+        height: 145,
+        width: "40%",
+        left: 12,
+        zIndex: 50
     }
 
 
